@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:panda/assets/app_images.dart';
+import 'package:panda/utils/size_scaler.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -10,7 +11,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SvgPicture.asset(AppImages.logo),
+        SvgPicture.asset(AppImages.logo, height: scaleHeight(236, context),),
         const SizedBox(height: 36),
         Text(
           'PANDA',

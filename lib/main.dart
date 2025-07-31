@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panda/screens/language_selection.dart';
+import 'package:panda/screens/location_selection.dart';
 import 'package:panda/screens/splash_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: LocationSelectionScreen(),
       routes: {
         '/languageSelection': (context) => const LanguageSelectionScreen(),
       },

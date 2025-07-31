@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:panda/assets/app_images.dart';
 import 'package:panda/assets/colors.dart';
+import 'package:panda/utils/size_scaler.dart';
 import 'package:panda/widgets/w_button.dart';
 
 class LocationPermission extends StatelessWidget {
@@ -11,11 +12,11 @@ class LocationPermission extends StatelessWidget {
     return Scaffold(
       backgroundColor: white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 26.0),
+        padding:   EdgeInsets.fromLTRB(26, MediaQuery.paddingOf(context).top, 26, MediaQuery.paddingOf(context).bottom ),
         child: Column(
           children: [
             Spacer(flex: 2),
-            Image.asset(AppImages.map, height: 375),
+            Image.asset(AppImages.map, height: scaleHeight(375, context)),
             Spacer(flex: 3),
             Text(
               'Разрешите доступ к геопозиции',
